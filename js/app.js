@@ -4,7 +4,7 @@ var CCCheckApp = {};
 
 $(document).ready(function() {
 
-	// When submit button is clicked perform for validation
+	// When submit button is clicked perform form validation
 	$('#submitButton').click(function(e) {
 		e.preventDefault();
 	
