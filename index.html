@@ -27,19 +27,19 @@
 
 						<!-- Card Holder Name Text Field -->
 						<div class="form-group form-input-text-size">
-							<input type="text" class="form-control" id="name" placeholder="Card Holder Name">
+							<input type="text" class="form-control" id="name" placeholder="Card Holder Name" required>
 						</div>
 						
 						<!-- Credit Card Number Text Field -->
 						<div class="form-group form-input-text-size">			
-							<input type="text" class="form-control" id="ccnumber" placeholder="Card Number">
+							<input type="number" class="form-control" id="ccnumber" placeholder="Card Number" required>
 						</div>
 			
 						<!-- Card Expiry date and CVV Text Field -->
 						<div class="form-group form-group-flex">
-							<input type="text" class="form-control form-input-expiry-size" id="expmonth" placeholder="Month" maxlength="2">
-							<input type="text" class="form-control form-input-expiry-size" id="expyear" placeholder="Year" maxlength="2">
-							<input type="text" class="form-control form-input-csv-size" id="csv" placeholder="CSV" maxlength="3">
+							<input type="number" class="form-control form-input-expiry-size" id="expmonth" placeholder="Month" maxlength="2" required>
+							<input type="number" class="form-control form-input-expiry-size" id="expyear" placeholder="Year" maxlength="2" required>
+							<input type="number" class="form-control form-input-csv-size" id="csv" placeholder="CSV" maxlength="3" required>
 						</div>
 
 						<!-- Cancel and Submit Button -->
