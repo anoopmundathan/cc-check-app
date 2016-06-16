@@ -23,29 +23,28 @@
 				<div class="form-container">
 			
 					<!-- Credit Card Detail Filling Form-->
-					<form>
+					<form id="credit-card-form">
 
 						<!-- Card Holder Name Text Field -->
 						<div class="form-group form-input-text-size">
-							<input type="text" class="form-control" id="nameOnCardInput" placeholder="Card Holder Name">
+							<input type="text" class="form-control" id="name" placeholder="Card Holder Name">
 						</div>
 						
 						<!-- Credit Card Number Text Field -->
 						<div class="form-group form-input-text-size">			
-							<input type="text" class="form-control" id="cardNumberInput" placeholder="Card Number">
+							<input type="text" class="form-control" id="ccnumber" placeholder="Card Number">
 						</div>
 			
 						<!-- Card Expiry date and CVV Text Field -->
 						<div class="form-group form-group-flex">
-							<input type="text" class="form-control form-input-expiry-size" id="cardExpiryMonthInput" placeholder="Month" maxlength="2">
-							<input type="text" class="form-control form-input-expiry-size" id="cardExpiryYearInput" placeholder="Year" maxlength="2">
-							<input type="text" class="form-control form-input-cvv-size" id="cvvInput" placeholder="CVV" maxlength="3">
+							<input type="text" class="form-control form-input-expiry-size" id="expmonth" placeholder="Month" maxlength="2">
+							<input type="text" class="form-control form-input-expiry-size" id="expyear" placeholder="Year" maxlength="2">
+							<input type="text" class="form-control form-input-cvv-size" id="cvv" placeholder="CVV" maxlength="3">
 						</div>
 
 						<!-- Cancel and Submit Button -->
 						<div class="form-button-align">
-							<button type="submit" class="btn btn-default btn-align-cancel">CANCEL</button>
-							<button type="submit" class="btn btn-default btn-align-submit">SUBMIT</button>
+							<button type="submit" class="btn btn-default btn-align-submit" id="submitButton">SUBMIT</button>
 						</div>
 					</form>
 
@@ -54,6 +53,7 @@
 		</div>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="./js/app.js"></script>	
 </body>
 </html>

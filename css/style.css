@@ -92,12 +92,6 @@ body {
 	position: relative;
 }
 
-.btn-align-cancel{
-	position: absolute;
-	top: 0;
-	right: 200px;
-}
-
 .btn-align-submit {
 	position: absolute;
 	top: 0;
