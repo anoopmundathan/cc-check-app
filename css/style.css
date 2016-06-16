@@ -68,14 +68,13 @@ body {
 }
 
 .form-group-flex {
-	
-	/* Vendor prefix for flex*/
-	display: -webkit-box;
+    /* Vendor prefix for flex*/
+    display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -moz-flex;
     display: -webkit-flex;
-	display: flex;
+    display: flex;
 }
 
 .form-input-expiry-size {
