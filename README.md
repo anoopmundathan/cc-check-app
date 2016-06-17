@@ -1,7 +1,7 @@
 # Credit Card Check App
 This app validates credit card input.
 
-# How to run
+# How to run?.
 1. Clone the repository
 
   ```bash
@@ -14,3 +14,5 @@ This app validates credit card input.
   ```bash
   localhost:3000
   ```
+# Reference
+ [Luhn_algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm)
