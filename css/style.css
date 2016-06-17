@@ -14,7 +14,6 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 	background: #fafbfc;
 }
 
@@ -80,6 +79,13 @@ body {
     display: flex;
 }
 
+/* Turn off number input spinners */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .form-input-expiry-size {
 	max-width: 80px;
 }
@@ -99,6 +105,13 @@ body {
 	position: absolute;
 	top: 0;
 	right: 100px;
+}
+
+.msg-container {
+	width: 100%;
+	margin-left: 0px;
+	color: #CE6D39;
+	text-align: left;
 }
 
 /* Break Point 1: Media query break point for Tablet */
@@ -137,4 +150,3 @@ body {
 		margin-left:30px;
 	}
 }
-
