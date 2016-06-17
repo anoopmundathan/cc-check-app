@@ -5,9 +5,12 @@ This app validates credit card input.
 1. Clone the repository
 
   ```bash
-  $> cd folder
+  $> cd your-folder
   $> node install
   $> node server.js
   ```
   
-2. Open a broswer and visit localhost:3000
+2. Open a broswer and visit
+  ```bash
+  localhost:3000
+  ```
