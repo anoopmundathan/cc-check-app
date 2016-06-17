@@ -13,8 +13,8 @@ Server validates credit card number and returns to the client.
 
   ```bash
   $> cd your-folder
-  $> node install
-  $> node server.js
+  $> npm install
+  $> node server
   ```
   
 2. Open a broswer and visit
