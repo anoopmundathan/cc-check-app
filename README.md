@@ -17,7 +17,7 @@ Server validates credit card number and returns to the client.
   $> node server
   ```
   
-2. Open a broswer and visit
+2. Open a browser and visit
   ```bash
   localhost:3000
   ```
