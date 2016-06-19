@@ -1,3 +1,8 @@
+
+/*  
+ *  Credit Card Check App - app.js
+ */
+
 "use strict";
 
 // Credit Card App Object
@@ -38,7 +43,7 @@ window.CCCheckApp = {
 					
 				},
 
-			   /**
+			       /**
  				* Execute this function if async request failed.
  				*/
 				error: function() {
@@ -55,7 +60,7 @@ window.CCCheckApp = {
 
 /**
  * Start the App
-*/
+ */
 $(document).ready(function() {
 
 	// Register to click event
@@ -67,7 +72,7 @@ $(document).ready(function() {
 		var data = {};   // Hold form data.
 		var flag = true;  // Flag uses for form input
 
-	   /**
+       /**
         * Iterate through all input elements and retrieve the values.
         */
 		$('#credit-card-form div').children('input').each(function(i,el) {
