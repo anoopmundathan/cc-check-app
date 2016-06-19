@@ -1,8 +1,10 @@
 /**
- * Server - for Credit Card Check App
- * Include Modules
+ * Credit Card Check App - server.js
  */
- "use strict";
+ 
+"use strict";
+ 
+// Include modules
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -13,10 +15,10 @@ app.use(bodyParser.json());
 
 app.post('/api/cc', function(req, res) {
 
-	/**
-	 * Note: - Only credit card number is being validated
-	 * Expiry date, Expiry year, CSV is not being validated
-	 */
+      /**
+	* Note: - Only credit card number is being validated
+	* Expiry date, Expiry year, CSV is not being validated
+	*/
 	var CCApp = {};
 	CCApp.number = req.body.ccnumber;   // Store credit card number from the request.  
 
@@ -34,11 +36,11 @@ app.post('/api/cc', function(req, res) {
 		var parity = numdigits % 2;
 
 		for(var i=0; i < numdigits; i++) { 
-    		var digit = parseInt(this.number.charAt(i));
-    		if(i % 2 == parity) digit *= 2;   // Double every other digits
-    		if(digit > 9) digit -= 9;  
-    	 	sum += digit; 
-    	}
+    			var digit = parseInt(this.number.charAt(i));
+    		  	if(i % 2 == parity) digit *= 2;   // Double every other digits
+    		  	if(digit > 9) digit -= 9;  
+    	 	  	sum += digit; 
+    	       	}
 
  		return (sum % 10) == 0; 
 	}
@@ -52,17 +54,16 @@ app.post('/api/cc', function(req, res) {
 	CCApp.findOutCardType = function() {
         
         var length = this.number.length;
-        console.log(length);
-
+        
 		if ((/^(4)/.test(this.number)) && ((length == 13) || (length == 16) || (length == 19))) {
-    		return 'Visa';
-    	} else if ((/^3[47]/.test(this.number)) && (length == 15)) {
-    		return 'American Express';
+    			return 'Visa';
+    		} else if ((/^3[47]/.test(this.number)) && (length == 15)) {
+    			return 'American Express';
   		} else if ((/^5[1-5]/.test(this.number)) && (length == 16)) {
-    		return 'MasterCard';
-    	} else {
-    		return 'Unknown';
-    	}
+    			return 'MasterCard';
+    		} else {
+    			return 'Unknown';
+    		}
 	}
 
    /**
