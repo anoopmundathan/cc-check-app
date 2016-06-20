@@ -12,7 +12,8 @@ Server validates credit card number and returns isValid = ('true' || 'false' ) a
 1. Clone the repository
 
   ```bash
-  $> cd your-folder
+  $> git clone https://github.com/anoopmundathan/cc-check-app.git
+  $> cd cc-check-app
   $> npm install
   $> node server
   ```
