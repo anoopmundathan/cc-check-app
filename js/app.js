@@ -1,5 +1,5 @@
 
-/*  
+/*
  *  Credit Card Check App - app.js
  */
 
@@ -16,8 +16,7 @@ window.CCCheckApp = {
 	 validateCreditCard: function(data, callback) {
 
 		// API end point for credit card validation
-		var url = 'http://localhost:3000/api/cc';
-
+		var url = '/api/cc';
 		/**
 		 * Call  jQuery async request function
 		 */
@@ -36,14 +35,14 @@ window.CCCheckApp = {
 				success: function(data) {
 
 					console.log('Received response from server');
-					
+
 					if(typeof callback !== 'undefined'){
-     					callback(data);
+     				    callback(data);
    					};
-					
+
 				},
 
-			       /**
+			     /**
  				* Execute this function if async request failed.
  				*/
 				error: function() {
@@ -100,14 +99,14 @@ $(document).ready(function() {
 				if (response.hasOwnProperty('error')){
 					$(".msg-container").html('');
 					$(".form-container").append('<div class="msg-container "><h4>Contacting server failed</h4></div>');
-				} 
+				}
 				// Display response
 				else {
 					$(".msg-container").html('');
 					$(".form-container").append('<div class="msg-container"><h4>isValid:' + response.status +' Card Type: '+ response.type + '</h4></div>');
 				}
-				
-			}); 
+
+			});
 		}
 		else // All fields needs to be filled
 		{

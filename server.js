@@ -1,9 +1,9 @@
 /**
  * Credit Card Check App - server.js
  */
- 
+
 "use strict";
- 
+
 // Include modules
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -23,7 +23,7 @@ app.post('/api/cc', function(req, res) {
 	* Expiry date, Expiry year, CSV is not being validated
 	*/
     var CCApp = {};
-    CCApp.number = req.body.ccnumber;   // Store credit card number from the request.  
+    CCApp.number = req.body.ccnumber;   // Store credit card number from the request.
 
    /**
     * Validates the credit card number using the Luhn10 algorithm.
@@ -38,26 +38,26 @@ app.post('/api/cc', function(req, res) {
         var numdigits = this.number.length;
         var parity = numdigits % 2;
 
-        for(var i=0; i < numdigits; i++) { 
+        for(var i=0; i < numdigits; i++) {
           var digit = parseInt(this.number.charAt(i));
           if(i % 2 == parity) digit *= 2;   // Double every other digits
-          if(digit > 9) digit -= 9;  
-          sum += digit; 
+          if(digit > 9) digit -= 9;
+          sum += digit;
         }
 
-       return (sum % 10) == 0; 
+       return (sum % 10) == 0;
     }
 
    /**
     * Find out the card type using card length and starting seq number.
-    * 
+    *
     * @param {Number} number Credit card number.
     * @returns {String}
     */
     CCApp.findOutCardType = function() {
-        
+
         var length = this.number.length;
-        
+
        if ((/^(4)/.test(this.number)) && ((length == 13) || (length == 16) || (length == 19))) {
           return 'Visa';
         } else if ((/^3[47]/.test(this.number)) && (length == 15)) {
@@ -83,6 +83,6 @@ app.post('/api/cc', function(req, res) {
  * Start Listening request
  */
 var port = 3000;
-app.listen(port); 
+app.listen(port);
 
 console.log('Server is listening on port : ' + port );
