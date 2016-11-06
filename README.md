@@ -1,6 +1,8 @@
 # Credit Card Check App
 This is just a basic mock up app that validates credit card input.
 
+You can see live version [here](https://cc-check-app.herokuapp.com/)
+
 # Functionality
 A client server app. Server is in [nodejs](https://nodejs.org/en/) using [express](http://expressjs.com/) web framework.
 
@@ -8,7 +10,7 @@ After running server locally (see How to run? section), once you open the app, y
 
 Server validates credit card number and returns isValid = ('true' || 'false' ) and Card type = ('Visa'||'Master Card'||'American Express'||'UnKnown')
 
-# How to run?.
+## Development
 1. Clone the repository
 
   ```bash
@@ -17,14 +19,14 @@ Server validates credit card number and returns isValid = ('true' || 'false' ) a
   $> npm install
   $> node server
   ```
-  
+
 2. Open a browser and visit
   ```bash
   localhost:3000
   ```
-# Reference
+## Reference
  [Luhn_algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm)
- 
-# External Libraries
+
+## External Libraries
  [jQuery](https://jquery.com/)
  [Bootstrap](http://getbootstrap.com/)
