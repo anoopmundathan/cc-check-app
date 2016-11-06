@@ -82,7 +82,8 @@ app.post('/api/cc', function(req, res) {
 /**
  * Start Listening request
  */
-var port = 3000;
+var port = process.env.PORT || 3000;
+
 app.listen(port);
 
 console.log('Server is listening on port : ' + port );
